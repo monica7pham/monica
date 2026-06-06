@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Monica's Home</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Monica's Home</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Main Page</a></li>
+                <li><a href="about.html" class="nav-link active">About Me</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="about-section">
+            <h1>About Me</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Hi! I'm Monica</h2>
+                    <p>
+                        Welcome to my personal website. I'm passionate about creating meaningful projects 
+                        and continuously learning new technologies. With a background in various disciplines, 
+                        I bring a diverse perspective to every project I undertake.
+                    </p>
+                    
+                    <h3>My Journey</h3>
+                    <p>
+                        Over the years, I've developed a strong passion for problem-solving and innovation. 
+                        I believe in the power of creativity combined with technical expertise to build solutions 
+                        that make a real difference.
+                    </p>
+
+                    <h3>Skills & Expertise</h3>
+                    <ul class="skills-list">
+                        <li>Web Development</li>
+                        <li>Project Management</li>
+                        <li>Problem Solving</li>
+                        <li>Creative Thinking</li>
+                        <li>Technical Writing</li>
+                    </ul>
+
+                    <h3>What Drives Me</h3>
+                    <p>
+                        I'm driven by the desire to create impactful projects and contribute to meaningful causes. 
+                        Whether it's building innovative solutions or collaborating with like-minded individuals, 
+                        I'm always looking for new opportunities to grow and challenge myself.
+                    </p>
+                </div>
+
+                <div class="about-sidebar">
+                    <div class="info-card">
+                        <h3>Quick Facts</h3>
+                        <ul>
+                            <li><strong>Name:</strong> Monica</li>
+                            <li><strong>Based in:</strong> Your Location</li>
+                            <li><strong>Passion:</strong> Innovation & Technology</li>
+                            <li><strong>Goal:</strong> Create Impact</li>
+                        </ul>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Connect With Me</h3>
+                        <p>Feel free to reach out for collaboration or just to chat!</p>
+                        <ul>
+                            <li><a href="https://github.com" target="_blank">GitHub</a></li>
+                            <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                            <li><a href="mailto:contact@example.com">Email</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Monica's Home. All rights reserved.</p>
+        <p>Hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+    <style>
+        .about-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .about-text h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+            color: #007bff;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 1rem 0;
+        }
+
+        .skills-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .skills-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .info-card {
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .info-card li {
+            padding: 0.5rem 0;
+        }
+
+        .info-card a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
