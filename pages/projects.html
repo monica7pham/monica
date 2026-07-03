@@ -25,54 +25,63 @@
             <h1>My Projects</h1>
             <p class="section-subtitle">A showcase of my recent work and accomplishments</p>
 
-            <div class="projects-grid">
-                <!-- Goal Line Project -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h2>Goal Line</h2>
-                        <span class="project-status">Featured</span>
-                    </div>
-                    <p class="project-description">
-                        An innovative project focused on achieving objectives and tracking progress. 
-                        This project demonstrates my ability to manage complex workflows and deliver results.
-                    </p>
-                    <div class="project-details">
-                        <div class="detail-item">
-                            <strong>Type:</strong> <span>Personal Project</span>
+            <!-- 2026 Projects -->
+            <div class="projects-year">
+                <h2 class="year-heading">2026</h2>
+                
+                <div class="projects-grid">
+                    <!-- Goal Line Project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h2>Goal Line</h2>
+                            <span class="project-status">Running</span>
                         </div>
-                        <div class="detail-item">
-                            <strong>Status:</strong> <span>In Progress</span>
+                        <p class="project-description">
+                            I started this project on the rainy summer of 2026, when I noticed that there will be the world cup soon. 
+                            Made with the old coding set from long ago. With help from AI and my parents, I finally finished it. And the amazing part is: It works!!
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <strong>Type:</strong> <span>Personal Project</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Status:</strong> <span>Running in 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Technologies:</strong> <span>HTML, CSS, JavaScript</span>
+                            </div>
                         </div>
-                        <div class="detail-item">
-                            <strong>Technologies:</strong> <span>HTML, CSS, JavaScript</span>
+                        <div class="project-actions">
+                            <a href="../projects/2026/goalline/index.html" class="btn">View Details</a>
+                            <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub</a>
                         </div>
                     </div>
-                    <div class="project-actions">
-                        <a href="../projects/goalline/index.html" class="btn">View Details</a>
-                        <a href="https://github.com" target="_blank" class="btn btn-secondary">GitHub</a>
-                    </div>
-                </div>
 
-                <!-- Add more projects here -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <h2>Your Future Project</h2>
-                        <span class="project-status">Coming Soon</span>
-                    </div>
-                    <p class="project-description">
-                        Space for your next exciting project. Projects can include documentation, 
-                        images, videos, and more!
-                    </p>
-                    <div class="project-details">
-                        <div class="detail-item">
-                            <strong>Type:</strong> <span>To be announced</span>
+                    <!-- Family WC 2026 Prediction Project -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h2>Family WC 2026 Prediction</h2>
+                            <span class="project-status">Running</span>
                         </div>
-                        <div class="detail-item">
-                            <strong>Status:</strong> <span>Coming Soon</span>
+                        <p class="project-description">
+                            A system for family members to make World Cup 2026 predictions and compete together. 
+                            Features prediction tracking, trivia questions, real-time leaderboards, and scoring.
+                        </p>
+                        <div class="project-details">
+                            <div class="detail-item">
+                                <strong>Type:</strong> <span>Web Application</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Status:</strong> <span>Running in 2026</span>
+                            </div>
+                            <div class="detail-item">
+                                <strong>Technologies:</strong> <span>HTML, CSS, JavaScript, Supabase</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="project-actions">
-                        <button class="btn" disabled>Coming Soon</button>
+                        <div class="project-actions">
+                            <a href="../projects/2026/familyWC2026Prediction/index.html" class="btn">View Details</a>
+                            <a href="https://monica7pham.github.io/familyWC2026Prediction/" target="_blank" class="btn btn-secondary">Live Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,15 +151,11 @@
         .project-status {
             display: inline-block;
             padding: 0.25rem 0.75rem;
-            background-color: #007bff;
+            background-color: #28a745;
             color: white;
             border-radius: 20px;
             font-size: 0.75rem;
             font-weight: bold;
-        }
-
-        .project-status {
-            background-color: #28a745;
         }
 
         .project-card:has(.project-status:contains("Coming Soon")) .project-status {
@@ -209,6 +214,19 @@
             opacity: 0.6;
         }
 
+        .projects-year {
+            margin-bottom: 4rem;
+        }
+
+        .year-heading {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #007bff;
+            display: inline-block;
+        }
+
         @media (max-width: 768px) {
             .projects-grid {
                 grid-template-columns: 1fr;
@@ -216,6 +234,10 @@
 
             .projects-section h1 {
                 font-size: 2rem;
+            }
+
+            .year-heading {
+                font-size: 1.5rem;
             }
         }
     </style>
