@@ -1,0 +1,74 @@
+const int trigPin = 9;
+const int echoPin = 10;
+const int buzzer = 6;
+
+long duration;
+int distance;
+
+bool goalActive = false;
+unsigned long lastGoalTime = 0;
+
+void goalSound() {
+  tone(buzzer, 1200);
+  delay(100);
+
+  tone(buzzer, 1600);
+  delay(100);
+
+  tone(buzzer, 2000);
+  delay(200);
+
+  noTone(buzzer);
+}
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(buzzer, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  unsigned long currentTime = millis();
+
+  // Send ultrasonic pulse
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Read echo
+  duration = pulseIn(echoPin, HIGH, 20000);
+
+  if (duration == 0) {
+    distance = 999; // no object detected
+  } else {
+    distance = duration * 0.034 / 2;
+  }
+
+  Serial.print("Distance: ");
+  Serial.println(distance);
+
+  // Reset when the ball leaves the goal line area
+  if (distance >= 15) {
+    goalActive = false;
+  }
+
+  // Detect goal
+  if (distance > 2 &&
+      distance < 15 &&
+      !goalActive &&
+      (currentTime - lastGoalTime > 5000)) {
+
+    Serial.println("GOAL!");
+    goalSound();
+
+    lastGoalTime = currentTime;
+    goalActive = true;
+  }
+
+  delay(30);
+}
